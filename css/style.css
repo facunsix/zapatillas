@@ -214,6 +214,13 @@ nav {
     border-color: var(--accent-red);
     box-shadow: 0 0 0 3px rgba(230, 57, 70, 0.2);
 }
+/* Media query para pantallas muy pequeñas */
+@media (max-width: 480px) {
+    .currency-selector {
+        max-width: 100%;
+        padding: 0 10px; /* margen lateral interno opcional */
+    }
+}
 
 /* ===== HERO SECTION ===== */
 #hero {
