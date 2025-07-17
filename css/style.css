@@ -191,6 +191,12 @@ nav {
     transform: scale(1.05) rotate(15deg);
 }
 
+.currency-selector {
+    max-width: 200px;
+    width: 100%;
+    margin: 0 auto;
+}
+
 .currency-selector select {
     background: var(--secondary-gray);
     color: var(--light-gray);
@@ -201,9 +207,12 @@ nav {
     cursor: pointer;
     transition: var(--transition);
     font-weight: 500;
-    width: 120px;
+    width: 100%;
+    font-size: 1rem;
+    box-sizing: border-box;
 }
 
+/* Hover y focus */
 .currency-selector select:hover {
     background: var(--primary-gray);
     border-color: var(--accent-red);
@@ -214,11 +223,13 @@ nav {
     border-color: var(--accent-red);
     box-shadow: 0 0 0 3px rgba(230, 57, 70, 0.2);
 }
-/* Media query para pantallas muy pequeñas */
+
+/* 📱 Responsive: Más grande en móviles */
 @media (max-width: 480px) {
-    .currency-selector {
-        max-width: 100%;
-        padding: 0 10px; /* margen lateral interno opcional */
+    .currency-selector select {
+        font-size: 1.2rem;
+        padding: 14px 18px;
+        border-radius: 10px;
     }
 }
 
