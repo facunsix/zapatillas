@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="es" data-theme="dark">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Elije tu estilo | Zapatillas Premium</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Montserrat:wght@700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <!-- Efecto de partículas para fondo dinámico -->
+    <div class="particles" id="particles"></div>
+
+    <header class="glass">
+        <div class="container">
+            <div class="header-content">
+                <div class="logo">
+                    <i class="fas fa-shoe-prints"></i>
+                    Zapatillas Premium
+                </div>
+                <nav>
+                    <button id="theme-toggle" class="theme-toggle-button"><i class="fas fa-sun"></i></button>
+                    <div class="currency-selector">
+                        <select id="currency-select">
+                            <option value="ARS">🇦🇷 ARS</option>
+                            <option value="USD">🇺🇸 USD</option>
+                            <option value="BRL">🇧🇷 BRL</option>
+                            <option value="PYG">🇵🇾 PYG</option>
+                        </select>
+                    </div>
+                </nav>
+            </div>
+        </div>
+    </header>
+
+    <main class="container">
+        <section id="hero" class="glass">
+            <div class="hero-content">
+                <div class="hero-text">
+                    <h2>DESCUBRE LA ÚLTIMA COLECCIÓN</h2>
+                    <p>Encuentra el par perfecto que se adapte a tu estilo urbano y marca tendencia donde vayas.</p>
+                    <a href="#products" class="cta-button">Explorar Colección</a>
+                </div>
+                <div class="hero-image-container">
+                    <img src="images/pumas1.jpeg" alt="Zapatillas destacadas" class="hero-image">
+                </div>
+            </div>
+        </section>
+
+        <section id="products">
+            <h2>NUESTRAS ZAPATILLAS</h2>
+            <div class="product-grid">
+                <!-- Producto 1 -->
+                <div class="product-card glass">
+                    <img src="images/vans2.jpeg" alt="Zapatillas Vans Común" class="product-image">
+                    <h3>Vans Old Skool</h3>
+                    <p class="description">El estilo skate clásico que nunca pasa de moda. Suela waffle original.</p>
+                    <div class="product-info">
+                        <p class="sizes">Talles: 34 - 38</p>
+                        <p class="price" data-price-ars="24000">$24.000</p>
+                    </div>
+                    <button class="whatsapp-btn" data-product="Vans Común">
+                        <i class="fab fa-whatsapp"></i> Comprar por WhatsApp
+                    </button>
+                </div>
+
+                <!-- Producto 2 -->
+                <div class="product-card glass">
+                    <img src="images/vans11.jpeg" alt="Zapatillas Vans Común" class="product-image">
+                    <h3>Vans Old Skool</h3>
+                    <p class="description">El estilo skate clásico que nunca pasa de moda. Suela waffle original.</p>
+                    <div class="product-info">
+                        <p class="sizes">Talles: 34 - 38</p>
+                        <p class="price" data-price-ars="24000">$24.000</p>
+                    </div>
+                    <button class="whatsapp-btn" data-product="Vans Común">
+                        <i class="fab fa-whatsapp"></i> Comprar por WhatsApp
+                    </button>
+                </div>
+
+
+
+
+
+            </div>
+        </section>
+    </main>
+
+    <footer class="glass">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-brand">
+                    <div class="logo">
+                        <i class="fas fa-shoe-prints"></i>
+                        URBANO STYLE
+                    </div>
+                    <p>Calidad premium para el estilo urbano</p>
+                </div>
+      
+            </div>
+            <div class="copyright">
+                <p>&copy; 2025 Urbano Style. Todos los derechos reservados.</p>
+            </div>
+        </div>
+    </footer>
+    <script src="js/script.js"></script>
+</body>
+</html>
