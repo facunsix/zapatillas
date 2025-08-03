@@ -176,9 +176,9 @@ nav {
 .theme-toggle-button {
     background: var(--secondary-gray);
     border: none;
-    width: 45px;
-    height: 45px;
-    border-radius: 50%;
+    width: 50px;
+    height: 37px;
+    border-radius: 70%;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -771,7 +771,7 @@ footer {
 }
 
 .modal-gallery img {
-  width: 100px;
+  width: 200px;
   height: auto;
   border-radius: 8px;
 }
