@@ -40,7 +40,7 @@
                 <div class="hero-text">
                     <h2>DESCUBRE LA ÚLTIMA COLECCIÓN</h2>
                     <p>Encuentra el par perfecto que se adapte a tu estilo urbano y marca tendencia donde vayas.</p>
-                    <a href="#products" class="cta-button">Explorar Colección</a>
+                    <a onclick="scrollToProducts()" href="#products" class="cta-button">Explorar Colección</a>
                 </div>
                 <div class="hero-image-container">
                     <img src="images/pumas1.jpeg" alt="Zapatillas destacadas" class="hero-image">
@@ -52,18 +52,23 @@
             <h2>NUESTRAS ZAPATILLAS</h2>
             <div class="product-grid">
                 <!-- Producto 1 -->
-                <div class="product-card glass">
-                    <img src="images/vans2.jpeg" alt="Zapatillas Vans Común" class="product-image">
-                    <h3>Vans Old Skool</h3>
-                    <p class="description">El estilo skate clásico que nunca pasa de moda. Suela waffle original.</p>
-                    <div class="product-info">
-                        <p class="sizes">Talles: 34 - 38</p>
-                        <p class="price" data-price-ars="24000">$24.000</p>
-                    </div>
-                    <button class="whatsapp-btn" data-product="Vans Común">
-                        <i class="fab fa-whatsapp"></i> Comprar por WhatsApp
-                    </button>
-                </div>
+              <div class="product-card glass" onclick="openModal(
+                'images/12.mp4', 
+                ['34', '35', '36', '37', '38'], 
+                ['images/vans2-1.jpeg', 'images/vans2-2.jpeg', 'images/vans2-3.jpeg']
+                )">
+    <img src="images/vans2.jpeg" alt="Zapatillas Vans Común" class="product-image">
+    <h3>Vans Old Skool</h3>
+    <p class="description">El estilo skate clásico que nunca pasa de moda. Suela waffle original.</p>
+    <div class="product-info">
+        <p class="sizes">Talles: 34 - 38</p>
+        <p class="price" data-price-ars="36000">$36.000</p>
+    </div>
+    <button class="whatsapp-btn" data-product="Vans Común">
+        <i class="fab fa-whatsapp"></i> Comprar por WhatsApp
+    </button>
+</div>
+
 
                 <!-- Producto 2 -->
                 <div class="product-card glass">
@@ -105,5 +110,23 @@
         </div>
     </footer>
     <script src="js/script.js"></script>
+
+    <div id="modal" class="modal">
+  <div class="modal-content">
+    <span class="close" onclick="closeModal()">&times;</span>
+    
+    <div class="modal-video-container">
+      <video id="modal-video" controls autoplay></video>
+    </div>
+
+    <div class="talles">
+      <h4>Talles disponibles</h4>
+      <div id="talles-list"></div>
+    </div>
+
+    <div class="modal-gallery" id="modal-gallery"></div>
+  </div>
+</div>
+
 </body>
 </html>
