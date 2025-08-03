@@ -43,6 +43,10 @@ body {
     background-attachment: fixed;
     transition: background 0.5s ease;
 }
+html {
+  scroll-behavior: smooth;
+}
+
 
 h1, h2, h3, h4 {
     font-family: 'Montserrat', sans-serif;
@@ -700,3 +704,79 @@ footer {
 .product-card:nth-child(6) { animation-delay: 0.6s; }
 .product-card:nth-child(7) { animation-delay: 0.7s; }
 .product-card:nth-child(8) { animation-delay: 0.8s; }
+
+
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 9999;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow-y: auto;
+  background-color: rgba(0, 0, 0, 0.8);
+  backdrop-filter: blur(6px);
+}
+
+.modal-content {
+  margin: 5% auto;
+  background: var(--bg-color);
+  border-radius: 1rem;
+  padding: 20px;
+  max-width: 700px;
+  width: 90%;
+  color: var(--text-color);
+  animation: fadeIn 0.4s ease-in-out;
+}
+
+.modal-video-container video {
+  width: 100%;
+  border-radius: 1rem;
+  max-height: 400px;
+  object-fit: cover;
+}
+
+.close {
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+  cursor: pointer;
+  color: #fff;
+}
+
+.talles {
+  margin-top: 20px;
+}
+
+#talles-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+#talles-list span {
+  padding: 5px 12px;
+  background: #eee;
+  color: #333;
+  border-radius: 5px;
+  font-weight: bold;
+}
+
+.modal-gallery {
+  display: flex;
+  gap: 10px;
+  margin-top: 20px;
+  overflow-x: auto;
+}
+
+.modal-gallery img {
+  width: 100px;
+  height: auto;
+  border-radius: 8px;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(30px); }
+  to { opacity: 1; transform: translateY(0); }
+}
