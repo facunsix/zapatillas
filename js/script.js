@@ -97,6 +97,7 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     };
 
+
     const updatePrices = (selectedCurrency) => {
         prices.forEach(priceElement => {
             const priceARS = parseFloat(priceElement.dataset.priceArs);
@@ -144,6 +145,8 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     });
     
+
+
     // Animación de carga suave
     document.querySelectorAll('.product-card, #hero').forEach(el => {
         el.style.animation = 'fadeIn 0.8s forwards';
@@ -154,3 +157,46 @@ document.addEventListener('DOMContentLoaded', () => {
         createParticles();
     });
 });
+
+function scrollToProducts() {
+    const section = document.querySelector('#products');
+    section.scrollIntoView({ behavior: 'smooth' });
+}
+function openModal(videoSrc, talles, fotos) {
+  const modal = document.getElementById("modal");
+  const video = document.getElementById("modal-video");
+  const tallesList = document.getElementById("talles-list");
+  const gallery = document.getElementById("modal-gallery");
+
+  // Cargar video
+  video.src = videoSrc;
+  video.play();
+
+  // Cargar talles
+  tallesList.innerHTML = "";
+  talles.forEach(talle => {
+    const span = document.createElement("span");
+    span.textContent = talle;
+    tallesList.appendChild(span);
+  });
+
+  // Cargar fotos
+  gallery.innerHTML = "";
+  fotos.forEach(src => {
+    const img = document.createElement("img");
+    img.src = src;
+    gallery.appendChild(img);
+  });
+
+  modal.style.display = "block";
+}
+
+function closeModal() {
+  const modal = document.getElementById("modal");
+  const video = document.getElementById("modal-video");
+
+  modal.style.display = "none";
+  video.pause();
+  video.src = "";
+}
+
