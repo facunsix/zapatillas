@@ -844,8 +844,11 @@ footer {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
             gap: 40px;
-            padding: 20px;
+             width: 90%;
+    margin: 0 auto;
+    max-width: 100%;
         }
+
 
 .brand-card {
     position: relative;
@@ -988,6 +991,8 @@ footer {
     .brands-grid {
         grid-template-columns: repeat(2, 1fr);
         gap: 30px;
+         width: 450px;
+         width: 120%;
     }
 
     .brand-card {
@@ -1086,7 +1091,7 @@ footer {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 25px;
-    width: 90%;
+    width: 100%;
     max-width: 1400px;
     margin: 0 auto;
     padding: 20px;
@@ -1099,7 +1104,15 @@ footer {
     overflow: hidden;
     transition: all 0.5s cubic-bezier(0.16, 1, 0.3, 1);
     height: 100%;
-    box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
+    box-shadow: 0 25px 30px -12px rgba(0, 0, 0, 0.719);
+}
+
+/* Responsive Design */
+@media (max-width: 512px) {
+    .skalas-card {
+ width: 272px;
+    }
+    
 }
 
 .skalas-card.image-top {
@@ -1107,7 +1120,7 @@ footer {
 }
 
 .skalas-content {
-    padding: 30px;
+    padding: 30px ;
     background: var(--glass-bg);
     backdrop-filter: blur(16px);
     border: 1px solid var(--glass-border);
@@ -1500,6 +1513,7 @@ footer {
         max-width: 100%;
         gap: 10px;
         padding: 10px;
+        max-width: 700px;
     }
 
     .skalas-product-card {
@@ -1515,13 +1529,13 @@ footer {
     }
 
     .skalas-product-info h3 {
-        font-size: 0.95rem;
-        margin-bottom: 4px;
+        font-size: 0.80rem;
+        margin-bottom: 0px;
     }
 
     .skalas-line {
-        font-size: 0.7rem;
-        margin-bottom: 6px;
+        font-size: 0.68rem;
+        margin-bottom: 4px;
     }
 
     .skalas-prices {
@@ -1548,7 +1562,7 @@ footer {
     }
 
     .skalas-whatsapp-btn {
-        font-size: 0.7rem;
+        font-size: 0.6rem;
         padding: 10px 8px;
         gap: 5px;
     }
