@@ -5,21 +5,28 @@ document.addEventListener('DOMContentLoaded', () => {
     const prices = document.querySelectorAll('.price');
     const body = document.body;
     
+// Función para crear partículas optimizadas
 function createParticles() {
     const particlesContainer = document.getElementById('particles');
-    const particleCount = 25;
+    const isMobile = window.innerWidth < 768;
+    const particleCount = isMobile ? 15 : 25;
     particlesContainer.innerHTML = '';
 
     for (let i = 0; i < particleCount; i++) {
         const particle = document.createElement('div');
         particle.classList.add('particle');
 
-        const size = Math.random() * 30 + 10;
+        // Tamaño más pequeño en móviles
+        const size = isMobile ? 
+            Math.random() * 20 + 10 : 
+            Math.random() * 30 + 15;
+        
         const posX = Math.random() * 100;
         const posY = Math.random() * 100;
-        const delay = Math.random() * 20;
-        const duration = 15 + Math.random() * 10; // entre 15s y 25s
+        const delay = Math.random() * 25;
+        const duration = isMobile ? 25 + Math.random() * 15 : 20 + Math.random() * 15;
         const hue = 350 + Math.random() * 20;
+        const lightness = 65 + Math.random() * 10;
 
         particle.style.width = `${size}px`;
         particle.style.height = `${size}px`;
@@ -27,14 +34,18 @@ function createParticles() {
         particle.style.top = `${posY}%`;
         particle.style.animationDelay = `${delay}s`;
         particle.style.animationDuration = `${duration}s`;
-        particle.style.background = `hsla(${hue}, 70%, 60%, 0.15)`;
+        particle.style.background = `hsla(${hue}, 80%, ${lightness}%, 0.35)`;
+        
+        // Brillo adicional
+        particle.style.boxShadow = `0 0 ${size/2}px ${size/4}px hsla(${hue}, 80%, ${lightness}%, 0.3)`;
 
         particlesContainer.appendChild(particle);
     }
 }
 
-createParticles();
-
+// Inicializar partículas al cargar y al redimensionar
+window.addEventListener('load', createParticles);
+window.addEventListener('resize', createParticles);
     
     // --- Funcionalidad de Tema Claro/Oscuro ---
     const savedTheme = localStorage.getItem('theme');
@@ -309,3 +320,22 @@ function closeModal() {
                 });
             });
             });
+
+
+            document.querySelectorAll('.skalas-product-card').forEach(card => {
+    const image = card.querySelector('.skalas-product-image');
+    const title = card.querySelector('h3')?.textContent;
+    const line = card.querySelector('.skalas-line')?.textContent;
+    const priceCaja = card.querySelector('.price-box:nth-child(1) .price')?.textContent;
+    const priceUnidad = card.querySelector('.price-box:nth-child(2) .price')?.textContent;
+
+    image.addEventListener('click', () => {
+        document.querySelector('#skalas-modal').style.display = 'flex';
+        document.querySelector('.skalas-modal-img').src = image.src;
+        document.querySelector('.skalas-modal-title').textContent = title;
+        document.querySelector('.skalas-modal-line').textContent = line;
+        document.querySelector('.price-caja').textContent = priceCaja;
+        document.querySelector('.price-unidad').textContent = priceUnidad;
+    });
+});
+
