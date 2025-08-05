@@ -5,38 +5,36 @@ document.addEventListener('DOMContentLoaded', () => {
     const prices = document.querySelectorAll('.price');
     const body = document.body;
     
-    // Crear efecto de partículas mejorado
-    function createParticles() {
-        const particlesContainer = document.getElementById('particles');
-        const particleCount = 25;
-        
-        // Limpiar partículas existentes
-        particlesContainer.innerHTML = '';
-        
-        for (let i = 0; i < particleCount; i++) {
-            const particle = document.createElement('div');
-            particle.classList.add('particle');
-            
-            // Tamaño y posición aleatorios (evitando bordes)
-            const size = Math.random() * 30 + 10;
-            const posX = Math.random() * 80 + 10; // Entre 10% y 90%
-            const posY = Math.random() * 80 + 10; // Entre 10% y 90%
-            const animationDelay = Math.random() * 15;
-            const hue = 350 + Math.random() * 20; // Tonos rojos
-            
-            particle.style.width = `${size}px`;
-            particle.style.height = `${size}px`;
-            particle.style.left = `${posX}%`;
-            particle.style.top = `${posY}%`;
-            particle.style.animationDelay = `${animationDelay}s`;
-            particle.style.background = `hsla(${hue}, 70%, 60%, 0.15)`;
-            
-            particlesContainer.appendChild(particle);
-        }
+function createParticles() {
+    const particlesContainer = document.getElementById('particles');
+    const particleCount = 25;
+    particlesContainer.innerHTML = '';
+
+    for (let i = 0; i < particleCount; i++) {
+        const particle = document.createElement('div');
+        particle.classList.add('particle');
+
+        const size = Math.random() * 30 + 10;
+        const posX = Math.random() * 100;
+        const posY = Math.random() * 100;
+        const delay = Math.random() * 20;
+        const duration = 15 + Math.random() * 10; // entre 15s y 25s
+        const hue = 350 + Math.random() * 20;
+
+        particle.style.width = `${size}px`;
+        particle.style.height = `${size}px`;
+        particle.style.left = `${posX}%`;
+        particle.style.top = `${posY}%`;
+        particle.style.animationDelay = `${delay}s`;
+        particle.style.animationDuration = `${duration}s`;
+        particle.style.background = `hsla(${hue}, 70%, 60%, 0.15)`;
+
+        particlesContainer.appendChild(particle);
     }
-    
-    // Iniciar partículas
-    createParticles();
+}
+
+createParticles();
+
     
     // --- Funcionalidad de Tema Claro/Oscuro ---
     const savedTheme = localStorage.getItem('theme');
@@ -71,14 +69,14 @@ document.addEventListener('DOMContentLoaded', () => {
     // --- Funcionalidad de Conversión de Moneda ---
     const exchangeRates = {
         ARS: 1, // Base
-        USD: 1000, // Ejemplo: 1 USD = 1000 ARS
-        BRL: 200, // Ejemplo: 1 BRL = 200 ARS
-        PYG: 0.15, // Ejemplo: 1 PYG = 0.15 ARS
+        USD: 1351.86, // Ejemplo: 1 USD = 1000 ARS
+        BRL: 243.49, // Ejemplo: 1 BRL = 200 ARS
+        PYG: 0.18, // Ejemplo: 1 PYG = 0.15 ARS
     };
 
     const currencySymbols = {
         ARS: '$',
-        USD: 'U$D',
+        USD: '$',
         BRL: 'R$',
         PYG: '₲',
     };
@@ -188,15 +186,126 @@ function openModal(videoSrc, talles, fotos) {
     gallery.appendChild(img);
   });
 
+  // Mostrar modal con animación
   modal.style.display = "block";
+  setTimeout(() => {
+    modal.classList.add("active");
+  }, 10);
 }
 
 function closeModal() {
   const modal = document.getElementById("modal");
   const video = document.getElementById("modal-video");
-
-  modal.style.display = "none";
-  video.pause();
-  video.src = "";
+  
+  // Iniciar animación de salida
+  modal.classList.remove("active");
+  
+  // Esperar a que termine la animación antes de ocultar
+  setTimeout(() => {
+    modal.style.display = "none";
+    video.pause();
+    video.src = "";
+  }, 300); // Debe coincidir con la duración de la transición CSS
 }
 
+ // Función para filtrar productos por marca
+        function filterProducts(brand) {
+            const allProducts = document.querySelectorAll('.product-card');
+            let visibleCount = 0;
+            
+            allProducts.forEach(product => {
+                if (brand === 'all' || product.getAttribute('data-brand') === brand) {
+                    product.style.display = 'block';
+                    product.style.animation = 'fadeIn 0.5s ease-out';
+                    visibleCount++;
+                } else {
+                    product.style.display = 'none';
+                }
+            });
+            
+            // Actualizar contador en el botón "Todas"
+            if (brand === 'all') {
+                document.querySelector('.brand-card[data-brand="all"] .product-count').textContent = `(${allProducts.length})`;
+            }
+            
+            return visibleCount;
+        }
+
+        // Función para contar productos por marca
+        function updateProductCounts() {
+            const brands = ['all', 'adidas', 'puma', 'new-balance', 'vans', 'cat'];
+            const countMap = {};
+            const allProducts = document.querySelectorAll('.product-card');
+            
+            // Inicializar contadores
+            brands.forEach(brand => {
+                countMap[brand] = 0;
+            });
+            
+            // Contar productos por marca
+            allProducts.forEach(product => {
+                const brand = product.getAttribute('data-brand');
+                countMap[brand]++;
+                countMap['all']++;
+            });
+            
+            // Actualizar tarjetas de marca
+            document.querySelectorAll('.brand-card').forEach(card => {
+                const brand = card.getAttribute('data-brand');
+                const count = countMap[brand] || 0;
+                const countElement = card.querySelector('.product-count');
+                
+                if (countElement) {
+                    countElement.textContent = `(${count})`;
+                } else {
+                    const newCountElement = document.createElement('span');
+                    newCountElement.classList.add('product-count');
+                    newCountElement.textContent = `(${count})`;
+                    card.querySelector('.brand-name').appendChild(newCountElement);
+                }
+            });
+        }
+
+        // Inicialización
+        document.addEventListener('DOMContentLoaded', function() {
+            // Actualizar contadores
+            updateProductCounts();
+            
+            // Filtrar todos los productos inicialmente
+            filterProducts('all');
+            
+            // Event listeners para las tarjetas de marca
+            document.querySelectorAll('.brand-card').forEach(card => {
+                card.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    const brand = this.getAttribute('data-brand');
+                    
+                    // Actualizar clase activa
+                    document.querySelectorAll('.brand-card').forEach(c => {
+                        c.classList.remove('active');
+                    });
+                    this.classList.add('active');
+                    
+                    // Filtrar productos
+                    filterProducts(brand);
+                });
+            });
+            
+          
+        });
+        
+        document.addEventListener('DOMContentLoaded', () => {
+            // Funcionalidad de WhatsApp para productos Skalas
+            const whatsappButtons = document.querySelectorAll('.skalas-whatsapp-btn');
+            const whatsappNumber = '+5493764634206';
+            
+            whatsappButtons.forEach(button => {
+                button.addEventListener('click', () => {
+                    const productName = button.dataset.product;
+                    const message = `¡Hola! Me interesa la crema ${productName}. ¿Podrías darme más información?`;
+                    const webLink = `https://api.whatsapp.com/send?phone=${whatsappNumber}&text=${encodeURIComponent(message)}`;
+                    
+                    window.open(webLink, '_blank');
+                });
+            });
+            });
