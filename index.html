@@ -14,28 +14,27 @@
     <!-- Efecto de partículas para fondo dinámico -->
     <div class="particles" id="particles"></div>
 
-    <header class="glass">
-        <div class="container">
-            <div class="header-content">
-
-<div class="logo">
-    <i class="fas fa-water"></i>
-    TIKVÁ
-</div>
-                <nav>
-                    <button id="theme-toggle" class="theme-toggle-button"><i class="fas fa-sun"></i></button>
-                    <div class="currency-selector">
-                        <select id="currency-select">
-                            <option value="ARS">🇦🇷 ARS</option>
-                            <option value="USD">🇺🇸 USD</option>
-                            <option value="BRL">🇧🇷 BRL</option>
-                            <option value="PYG">🇵🇾 PYG</option>
-                        </select>
-                    </div>
-                </nav>
+<header class="glass">
+    <div class="container">
+        <div class="header-content">
+            <div class="logo">
+                <i class="fas fa-water" id="tako"></i>
+                TIKVÁ
             </div>
+            <nav>
+                <button id="theme-toggle" class="theme-toggle-button"><i class="fas fa-sun"></i></button>
+                <div class="currency-selector">
+                    <select id="currency-select">
+                        <option value="ARS">🇦🇷 ARS</option>
+                        <option value="USD">🇺🇸 USD</option>
+                        <option value="BRL">🇧🇷 BRL</option>
+                        <option value="PYG">🇵🇾 PYG</option>
+                    </select>
+                </div>
+            </nav>
         </div>
-    </header>
+    </div>
+</header>
 
     <main class="container">
         <section id="hero" class="glass">
@@ -72,6 +71,15 @@
             </div>
         </div>
 
+
+
+
+
+
+
+
+        
+
         <!-- Tarjeta 2 - Imagen arriba -->
         <div class="skalas-card">
             <div class="skalas-image-container">
@@ -89,7 +97,6 @@
             </div>
         </div>
 
-
         <!-- Tarjeta 3 - Imagen abajo -->
         <div class="skalas-card">
             <div class="skalas-content">
@@ -106,6 +113,9 @@
                 <div class="image-overlay"></div>
             </div>
         </div>
+
+
+   
     </div>
 </section>
 
@@ -315,7 +325,7 @@
                 <p class="description">Puma Caven 2.0: look retro, confort moderno y pisada suave.</p>
                 <div class="product-info">
                     <p class="sizes">Talles: 38 - 41</p>
-                    <p class="price" data-price-ars="48700">$48.700</p>
+                    <p class="price" data-price-ars="42700">$42.700</p>
                 </div>
                 <button class="whatsapp-btn" data-product="Pumas Caven 2.0">
                     <i class="fab fa-whatsapp"></i> Comprar por WhatsApp
@@ -608,7 +618,7 @@
                         </div>
                         <div class="price-box">
                             <span class="price-label">Unidad</span>
-                            <span class="price" data-price-ars="5.300">$5.300</span>
+                            <span class="price" data-price-ars="5150">$5.150</span>
                         </div>
                     </div>
                     <button class="skalas-whatsapp-btn" data-product="Skala Potao Desmaiado Máscara Vegana Anti Frizz Pelo">
@@ -700,11 +710,11 @@
                     <div class="skalas-prices">
                         <div class="price-box">
                             <span class="price-label">Caja (6 unidades)</span>
-                            <span class="price" data-price-ars="69500">$69.500</span>
+                            <span class="price" data-price-ars="39500">$39.500</span>
                         </div>
                         <div class="price-box">
                             <span class="price-label">Unidad</span>
-                            <span class="price" data-price-ars="12890">$12.890</span>
+                            <span class="price" data-price-ars="6890">$6.890</span>
                         </div>
                     </div>
                     <button class="skalas-whatsapp-btn" data-product="Skala Macara Capilar Uva 2 En 1 Brillo Extremo">
@@ -748,7 +758,7 @@
                         <i class="fas fa-water"></i>
                         TIKVÁ
                     </div>
-                    <p>Dedicado a la venta de zapatillas originales y cremas Skala veganas. Calidad, estilo y cuidado en un solo lugar.</p>
+                    <p>Dedicado a la venta de zapatillas y cremas Skala veganas. Calidad, estilo y cuidado en un solo lugar.</p>
                 </div>
       
             </div>
@@ -776,6 +786,34 @@
   </div>
 </div>
 
+
+<!-- Modal de Imagen Ampliada -->
+<div id="skalas-modal" class="skalas-modal">
+
+     <span class="skalas-close" id="closeModalBtn">&times;</span>
+    <div class="skalas-modal-content">
+      
+        <img class="skalas-modal-img" src="" alt="Producto Skala Ampliado">
+        <div class="skalas-modal-info">
+            <h3 class="skalas-modal-title"></h3>
+            <p class="skalas-modal-line"></p>
+            <div class="skalas-modal-prices">
+                <div class="price-box">
+                    <span class="price-label">Caja (6 unidades)</span>
+                    <span class="price price-caja"></span>
+                </div>
+                <div class="price-box">
+                    <span class="price-label">Unidad</span>
+                    <span class="price price-unidad"></span>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script>document.querySelector('.skalas-close').addEventListener('click', () => {
+    document.querySelector('#skalas-modal').style.display = 'none';
+});</script>
 
 </body>
 </html>
