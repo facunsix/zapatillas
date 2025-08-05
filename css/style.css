@@ -1212,12 +1212,10 @@ footer {
 
 /* Responsive Design */
 @media (max-width: 1200px) {
-    .skalas-grid {
-        grid-template-columns: repeat(2, 1fr);
-    }
+
     
-    .skalas-card:last-child {
-        grid-column: span 2;
+    .skalas-card{
+        
         max-width: 600px;
         margin: 0 auto;
     }
@@ -1235,10 +1233,6 @@ footer {
         max-width: 600px;
     }
     
-    .skalas-card:last-child {
-        grid-column: span 1;
-        max-width: 100%;
-    }
     
     .skalas-content {
         padding: 25px;
