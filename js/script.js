@@ -9,7 +9,7 @@ document.addEventListener('DOMContentLoaded', () => {
 function createParticles() {
     const particlesContainer = document.getElementById('particles');
     const isMobile = window.innerWidth < 768; // Cambiamos el breakpoint a un valor más realista
-    const particleCount = isMobile ? 9 : 19// Aumentamos significativamente la cantidad
+    const particleCount = isMobile ? 5 : 19// Aumentamos significativamente la cantidad
     
     // Solo limpiar si hay partículas existentes
     if (particlesContainer.children.length === 0) {
@@ -190,10 +190,7 @@ window.addEventListener('scroll', () => {
     });
 });
 
-function scrollToProducts() {
-    const section = document.querySelector('#products');
-    section.scrollIntoView({ behavior: 'smooth' });
-}
+
 function openModal(videoSrc, talles, fotos) {
   const modal = document.getElementById("modal");
   const video = document.getElementById("modal-video");
