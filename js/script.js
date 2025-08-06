@@ -8,25 +8,33 @@ document.addEventListener('DOMContentLoaded', () => {
 // Función para crear partículas optimizadas
 function createParticles() {
     const particlesContainer = document.getElementById('particles');
-    const isMobile = window.innerWidth < 768;
-    const particleCount = isMobile ? 15 : 25;
-    particlesContainer.innerHTML = '';
+    const isMobile = window.innerWidth < 768; // Cambiamos el breakpoint a un valor más realista
+    const particleCount = isMobile ? 9 : 19// Aumentamos significativamente la cantidad
+    
+    // Solo limpiar si hay partículas existentes
+    if (particlesContainer.children.length === 0) {
+        particlesContainer.innerHTML = '';
+    }
 
     for (let i = 0; i < particleCount; i++) {
         const particle = document.createElement('div');
         particle.classList.add('particle');
 
-        // Tamaño más pequeño en móviles
-        const size = isMobile ? 
-            Math.random() * 20 + 10 : 
-            Math.random() * 30 + 15;
+        // Tamaño más variado
+        const size = Math.random() * 30 + 5; // Entre 5px y 35px
         
+        // Posición inicial aleatoria
         const posX = Math.random() * 100;
         const posY = Math.random() * 100;
+        
+        // Valores de animación
         const delay = Math.random() * 25;
-        const duration = isMobile ? 25 + Math.random() * 15 : 20 + Math.random() * 15;
+        const duration = 50 + Math.random() * 50; // Animación más larga
         const hue = 350 + Math.random() * 20;
         const lightness = 65 + Math.random() * 10;
+        
+        // Valores para movimiento horizontal
+        const moveX = (Math.random() - 0.5) * 100; // Movimiento horizontal aleatorio
 
         particle.style.width = `${size}px`;
         particle.style.height = `${size}px`;
@@ -35,6 +43,7 @@ function createParticles() {
         particle.style.animationDelay = `${delay}s`;
         particle.style.animationDuration = `${duration}s`;
         particle.style.background = `hsla(${hue}, 80%, ${lightness}%, 0.35)`;
+        particle.style.setProperty('--move-x', `${moveX}vw`); // Variable CSS para movimiento horizontal
         
         // Brillo adicional
         particle.style.boxShadow = `0 0 ${size/2}px ${size/4}px hsla(${hue}, 80%, ${lightness}%, 0.3)`;
@@ -43,9 +52,23 @@ function createParticles() {
     }
 }
 
-// Inicializar partículas al cargar y al redimensionar
+// Inicializar partículas al cargar
 window.addEventListener('load', createParticles);
-window.addEventListener('resize', createParticles);
+
+// Recrear partículas al redimensionar (con throttling)
+let resizeTimeout;
+window.addEventListener('resize', () => {
+    clearTimeout(resizeTimeout);
+    resizeTimeout = setTimeout(createParticles, 200);
+});
+
+// Crear más partículas al hacer scroll
+window.addEventListener('scroll', () => {
+    const particles = document.querySelectorAll('.particle');
+    if (particles.length < 300) { // Mantener un máximo de 300 partículas
+        createParticles();
+    }
+});
     
     // --- Funcionalidad de Tema Claro/Oscuro ---
     const savedTheme = localStorage.getItem('theme');
