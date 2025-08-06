@@ -8,7 +8,13 @@
 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Montserrat:wght@700;800&display=swap" rel="stylesheet">
+    <!-- AOS LIBRARY (poner en <head> o antes de cerrar el body si no está aún) -->
+<link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet">
+<script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+    
     <link rel="stylesheet" href="css/style.css">
+
+
 </head>
 <body>
     <!-- Efecto de partículas para fondo dinámico -->
@@ -36,8 +42,8 @@
     </div>
 </header>
 
-    <main class="container">
-        <section id="hero" class="glass">
+    <main class="container" >
+        <section id="hero" class="glass" >
             <div class="hero-content">
                 <div class="hero-text">
                     <h2>DESCUBRE LA ÚLTIMA COLECCIÓN</h2>
@@ -51,11 +57,11 @@
         </section>
 
 <section id="skalas" class="skalas-section">
-    <h2 class="section-title">LÍNEA DE CREMAS <span>SKALAS</span></h2>
+    <h2 class="section-title" data-aos="fade-up" data-aos-delay="200">LÍNEA DE CREMAS <span>SKALAS</span></h2>
     <div class="skalas-grid">
        
         <!-- Tarjeta 1 - Imagen abajo -->
-        <div class="skalas-card">
+        <div class="skalas-card" data-aos="fade-up" data-aos-delay="400">
             <div class="skalas-content">
                 <div class="content-inner">
                     <h3 class="skalas-title">Línea Frutástica</h3>
@@ -70,18 +76,9 @@
                 <div class="image-overlay"></div>
             </div>
         </div>
-
-
-
-
-
-
-
-
-        
-
+    
         <!-- Tarjeta 2 - Imagen arriba -->
-        <div class="skalas-card">
+        <div class="skalas-card" data-aos="fade-up" data-aos-delay="800">
             <div class="skalas-image-container">
                 <img src="skalas/expert.png" alt="Crema Skalas Profesional" class="skalas-image">
                 <div class="image-overlay"></div>
@@ -98,7 +95,7 @@
         </div>
 
         <!-- Tarjeta 3 - Imagen abajo -->
-        <div class="skalas-card">
+        <div class="skalas-card" data-aos="fade-up" data-aos-delay="1200">
             <div class="skalas-content">
                 <div class="content-inner">
                     <h3 class="skalas-title">Línea Brasil & Ceramidas</h3>
@@ -121,13 +118,13 @@
 
  <!-- ===== BRANDS SECTION ===== -->
     <section class="section">
-        <div class="container">
+        <div class="container" data-aos="fade-up" data-aos-delay="200">
             <div class="skalas-header">
             <h2 class="skalas-products-title">NUESTRAS <span>MARCAS</span></h2>
             <div class="wave-effect"></div>
             <div class="wave-effect"></div>
             <div class="wave-effect"></div>
-        </div>
+            </div>
             <div class="brands-grid">
                 <!-- Todas las marcas -->
                 <div class="brand-card glass active" data-brand="all">
@@ -172,20 +169,26 @@
 <br>
 <br>
 <br>
+<br>
+<br>
+<br>
+<br>
 
 
-        <div class="skalas-header">
+        <div class="skalas-header" data-aos="fade-up" data-aos-delay="200">
             <h2 class="skalas-products-title">NUESTRAS <span>ZAPATILLAS</span></h2>
               <div class="wave-effect"></div>
             <div class="wave-effect"></div>
             <div class="wave-effect"></div>
             </div>
         <section id="products">
-          
+<br>
+<br>
+
             
             <div class="product-grid">
                 <!-- Producto 1 -->
-            <div class="product-card glass" onclick="openModal(
+            <div data-aos="fade-up"  class="product-card glass" onclick="openModal(
                 'video/vansclas.mp4', 
                 ['34', '35', '36', '37', '38'], 
                 ['images/vans2.jpeg', 'images/vans111.jpeg', 'images/vans13.jpeg']
@@ -204,7 +207,7 @@
 
 
             <!-- Producto 2 -->
-            <div class="product-card glass" onclick="openModal(
+            <div data-aos="fade-up" data-aos-delay="200" class="product-card glass" onclick="openModal(
                 'video/vansnegra.mp4', 
                 ['38', '39', '40', '41', '42'], 
                 ['images/vans3.jpeg', 'images/vansnegras1.jpeg', 'images/vansnegras2.jpeg']
@@ -223,7 +226,7 @@
 
 
             <!-- Producto 3 -->
-            <div class="product-card glass" onclick="openModal(
+            <div data-aos="fade-up" data-aos-delay="400" class="product-card glass" onclick="openModal(
                 'video/vansblancas.mp4', 
                 ['34', '35', '36', '37', '38'], 
                 ['images/vans11.jpeg', 'images/vansb1.jpeg', 'images/vansb2.jpeg']
@@ -241,7 +244,7 @@
             </div>
 
                         <!-- Producto 4 -->
-            <div class="product-card glass" onclick="openModal(
+            <div data-aos="fade-up" data-aos-delay="200" class="product-card glass" onclick="openModal(
                 'video/nb.mp4', 
                 ['35', '36', '37', '38', '39'], 
                 ['images/nb1.jpeg', 'images/nb2.jpeg', 'images/nb3.jpeg']
@@ -259,7 +262,7 @@
             </div>
 
                                     <!-- Producto 5 -->
-            <div class="product-card glass" onclick="openModal(
+            <div data-aos="fade-up" data-aos-delay="400" class="product-card glass" onclick="openModal(
                 'video/cat.mp4', 
                 ['38', '39', '40', '41', '42', '43'], 
                 ['images/cat1.jpeg', 'images/cat2.jpeg', 'images/cat3.jpeg']
@@ -278,7 +281,7 @@
 
             
                                     <!-- Producto 6 -->
-            <div class="product-card glass" onclick="openModal(
+            <div data-aos="fade-up" data-aos-delay="600" class="product-card glass" onclick="openModal(
                 'video/adidasblancas.mp4', 
                 ['35', '36', '37', '38', '39'], 
                 ['images/a12.jpeg', 'images/adidas2.jpeg', 'images/a13.jpeg']
@@ -296,7 +299,7 @@
             </div>
 
                                             <!-- Producto 7 -->
-            <div class="product-card glass" onclick="openModal(
+            <div data-aos="fade-up" data-aos-delay="200" class="product-card glass" onclick="openModal(
                 'video/adidasmarrones.mp4', 
                 ['34', '35', '36', '37', '38'], 
                 ['images/adidas1.jpeg', 'images/am1.jpeg', 'images/am2.jpeg']
@@ -315,7 +318,7 @@
 
                                  <!-- Producto 8 -->
             
-            <div class="product-card glass" onclick="openModal(
+            <div data-aos="fade-up" data-aos-delay="400" class="product-card glass" onclick="openModal(
                 'video/puma1.mp4', 
                 ['38', '39', '40', '41'], 
                 ['images/p1.jpeg', 'images/p2.jpeg', 'images/p3.jpeg']
@@ -332,33 +335,30 @@
                 </button>
             </div>
 
-
-
             </div>
         </section>
 
 
-
-
-
-
-
-
+<br>
 
 
 
     <!-- Sección de productos Skalas -->
     <section id="skalas-products">
-        <div class="skalas-header">
+        <div class="skalas-header" data-aos="fade-up" data-aos-delay="200">
             <h2 class="skalas-products-title">CREMAS <span>SKALAS</span></h2>
             <div class="wave-effect"></div>
             <div class="wave-effect"></div>
             <div class="wave-effect"></div>
         </div>
-        
+   
+<br>
+<br>  
+<br>
+<br>   
         <div class="skalas-products-container">
             <!-- Producto 1 -->
-            <div class="skalas-product-card">
+            <div data-aos="fade-up"  class="skalas-product-card">
                 <div class="skalas-product-image-container">
                     <img src="skalas/skaabacate.png" alt="Skala Crema Para Peinar Abacate " class="skalas-product-image">
                 </div>
@@ -382,7 +382,7 @@
             </div>
 
             <!-- Producto 2 -->
-            <div class="skalas-product-card">
+            <div data-aos="fade-up" data-aos-delay="200" class="skalas-product-card">
                 <div class="skalas-product-image-container">
                     <img src="skalas/skacera.png" alt="Skala Impecavel Ceramidas G3 Crema Acondicionador" class="skalas-product-image">
                 </div>
@@ -407,7 +407,7 @@
             </div>
 
             <!-- Producto 3 -->
-            <div class="skalas-product-card">
+            <div data-aos="fade-up" data-aos-delay="400" class="skalas-product-card">
                 <div class="skalas-product-image-container">
                     <img src="skalas/skabebe.png" alt="Mascara Skala Coquetel De Frutas Liberada Vegana" class="skalas-product-image">
                 </div>
@@ -431,7 +431,7 @@
             </div>
 
             <!-- Producto 4 -->
-            <div class="skalas-product-card">
+            <div data-aos="fade-up" data-aos-delay="600" class="skalas-product-card">
                 <div class="skalas-product-image-container">
                     <img src="skalas/babosa.png" alt="Skala Crema De Peinar Hidratacion Profunda" class="skalas-product-image">
                 </div>
@@ -455,7 +455,7 @@
             </div>
 
             <!-- Producto 5 -->
-            <div class="skalas-product-card">
+            <div data-aos="fade-up" class="skalas-product-card">
                 <div class="skalas-product-image-container">
                     <img src="skalas/manza.png" alt="Skala Mascara Crema Vinagre De Maca Manzana Vegana" class="skalas-product-image">
                 </div>
@@ -480,7 +480,7 @@
 
 
               <!-- Producto 6 -->
-            <div class="skalas-product-card">
+            <div data-aos="fade-up" data-aos-delay="200" class="skalas-product-card">
                 <div class="skalas-product-image-container">
                     <img src="skalas/12-1.png" alt="Mascara Skala 12 En 1 Restauración" class="skalas-product-image">
                 </div>
@@ -506,7 +506,7 @@
 
 
             <!-- Producto 7 -->
-            <div class="skalas-product-card">
+            <div data-aos="fade-up" data-aos-delay="400" class="skalas-product-card">
                 <div class="skalas-product-image-container">
                     <img src="skalas/coco.png" alt="Skala Máscara Coco Frutástica 2 En 1 Nutrición" class="skalas-product-image">
                 </div>
@@ -531,7 +531,7 @@
 
 
              <!-- Producto 8 -->
-            <div class="skalas-product-card">
+            <div data-aos="fade-up" data-aos-delay="600" class="skalas-product-card">
                 <div class="skalas-product-image-container">
                     <img src="skalas/celeste.png" alt="Máscara Skala MAIS CACHOS hidratación" class="skalas-product-image">
                 </div>
@@ -556,7 +556,7 @@
 
             
               <!-- Producto 9 -->
-            <div class="skalas-product-card">
+            <div data-aos="fade-up"  class="skalas-product-card">
                 <div class="skalas-product-image-container">
                     <img src="skalas/rosada.png" alt="Mascara Divino Potao Crema Peinar Rulos Skala Vegana" class="skalas-product-image">
                 </div>
@@ -580,7 +580,7 @@
             </div>
 
              <!-- Producto 10 -->
-            <div class="skalas-product-card">
+            <div data-aos="fade-up" data-aos-delay="200" class="skalas-product-card">
                 <div class="skalas-product-image-container">
                     <img src="skalas/banana.png" alt="Mascara Skala 2 En 1 Banana Y Bacuri" class="skalas-product-image">
                 </div>
@@ -604,7 +604,7 @@
             </div>
 
             <!-- Producto 11 -->
-            <div class="skalas-product-card">
+            <div data-aos="fade-up" data-aos-delay="400" class="skalas-product-card">
                 <div class="skalas-product-image-container">
                     <img src="skalas/dificil.png" alt="Skala Potao Desmaiado Máscara Vegana Anti Frizz Pelo" class="skalas-product-image">
                 </div>
@@ -627,7 +627,7 @@
                 </div>
             </div>
         <!-- Producto 12 -->
-            <div class="skalas-product-card">
+            <div data-aos="fade-up" data-aos-delay="600" class="skalas-product-card">
                 <div class="skalas-product-image-container">
                     <img src="skalas/roda.png" alt="Mascara Crema Skala Dona 2 En 1 Crema Peinar Vegana" class="skalas-product-image">
                 </div>
@@ -651,7 +651,7 @@
             </div>
 
                     <!-- Producto 13 -->
-            <div class="skalas-product-card">
+            <div data-aos="fade-up"  class="skalas-product-card">
                 <div class="skalas-product-image-container">
                     <img src="skalas/br.png" alt="Baño De Crema Skala Maracuya Fortalecedor" class="skalas-product-image">
                 </div>
@@ -675,7 +675,7 @@
             </div>
 
                     <!-- Producto 14 -->
-            <div class="skalas-product-card">
+            <div data-aos="fade-up" data-aos-delay="200" class="skalas-product-card">
                 <div class="skalas-product-image-container">
                     <img src="skalas/colico.png" alt="Skala Genetic Glicolico Crema Vegana Brillo Hidratación 1kg" class="skalas-product-image">
                 </div>
@@ -700,7 +700,7 @@
 
 
                     <!-- Producto 15 -->
-            <div class="skalas-product-card">
+            <div data-aos="fade-up" data-aos-delay="400" class="skalas-product-card">
                 <div class="skalas-product-image-container">
                     <img src="skalas/u.png" alt="Skala Macara Capilar Uva 2 En 1 Brillo Extremo" class="skalas-product-image">
                 </div>
@@ -724,7 +724,7 @@
             </div>
 
               <!-- Producto 16 -->
-            <div class="skalas-product-card">
+            <div data-aos="fade-up" data-aos-delay="600" class="skalas-product-card">
                 <div class="skalas-product-image-container">
                     <img src="skalas/moran.png" alt="Skala Mascara Crema Para Peinar Frutilla Morango Vegana" class="skalas-product-image">
                 </div>
@@ -749,6 +749,91 @@
         </div>
     </section>
     </main>
+    <br>
+
+<!-- SECCIÓN INFORMATIVA CON CORRECCIONES DE TEMA -->
+<section id="info-section" class="info-section">
+  <div class="section-header" data-aos="fade-up">
+    <h2>Tu experiencia Tikvá</h2>
+    <p class="section-subtitle">Todo lo que necesitás saber para una compra fácil y segura</p>
+  </div>
+  
+  <div class="info-grid">
+    <!-- FAQ -->
+    <div class="info-card" data-aos="fade-up">
+      <div class="card-icon">
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <circle cx="12" cy="12" r="10"></circle>
+          <path d="M9.09 9a3 3 0 0 1 5.83 1c0 2-3 3-3 3"></path>
+          <line x1="12" y1="17" x2="12.01" y2="17"></line>
+        </svg>
+      </div>
+      <h3>Preguntas Frecuentes</h3>
+      <p>¿Tenés dudas? Navegá nuestros productos tranquilamente en esta página. Para comprar o consultar, escribinos por WhatsApp.</p>
+      <div class="card-highlight">
+        <span>¡Respondemos en minutos, sin vueltas!</span>
+      </div>
+    </div>
+
+    <!-- Política de envíos -->
+    <div class="info-card" data-aos="fade-up" data-aos-delay="200">
+      <div class="card-icon">
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M3 3h18v18H3z"></path>
+          <circle cx="12" cy="12" r="3"></circle>
+          <path d="M18 6L6 18"></path>
+        </svg>
+      </div>
+      <h3>Envíos y Retiros</h3>
+      <p>Llevamos tus productos hasta la puerta de tu casa en <strong>Posadas, Misiones</strong>. También podés retirar en nuestro punto de encuentro.</p>
+      <div class="card-highlight">
+        <span>¡Coordinamos horarios a tu medida!</span>
+      </div>
+    </div>
+
+    <!-- Medios de pago -->
+    <div class="info-card" data-aos="fade-up" data-aos-delay="400">
+      <div class="card-icon">
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <rect x="1" y="4" width="22" height="16" rx="2" ry="2"></rect>
+          <line x1="1" y1="10" x2="23" y2="10"></line>
+        </svg>
+      </div>
+      <h3>Formas de Pago</h3>
+      <p>Aceptamos múltiples opciones para tu comodidad:</p>
+      <ul class="payment-methods">
+        <li>Efectivo</li>
+        <li>Mercado Pago</li>
+        <li>Transferencias</li>
+        <li>Billeteras digitales</li>
+      </ul>
+    </div>
+
+    <!-- Sobre nosotros -->
+    <div class="info-card" data-aos="fade-up" data-aos-delay="600">
+      <div class="card-icon">
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path>
+          <circle cx="9" cy="7" r="4"></circle>
+          <path d="M23 21v-2a4 4 0 0 0-3-3.87"></path>
+          <path d="M16 3.13a4 4 0 0 1 0 7.75"></path>
+        </svg>
+      </div>
+      <h3>Nuestra Esencia</h3>
+      <p><strong>Tikvá</strong> nació para ofrecerte más que productos: una experiencia de compra cercana y confiable.</p>
+      <div class="card-highlight">
+        <span>Emprendimiento local con pasión por lo que hacemos</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+    <br>
+    <br>
+<br>
+
+
 
     <footer class="glass">
         <div class="container">
@@ -814,6 +899,14 @@
 <script>document.querySelector('.skalas-close').addEventListener('click', () => {
     document.querySelector('#skalas-modal').style.display = 'none';
 });</script>
+
+
+<script>
+  AOS.init({
+    duration: 1000,
+    once: true
+  });
+</script>
 
 </body>
 </html>
