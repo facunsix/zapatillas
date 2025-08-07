@@ -1,0 +1,332 @@
+<!DOCTYPE html>
+<html lang="es" data-theme="dark">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tikvá | Zapatillas y Skalas</title>
+<meta name="description" content="Tikvá es tu tienda de confianza para zapatillas y cremas Skala en Argentina. Productos originales, atención personalizada y envíos a todo el país.">
+
+    <link rel="icon" href="https://i.ibb.co/1JTm1rQk/logo.png" type="image/x-icon">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Montserrat:wght@700;800&display=swap" rel="stylesheet">
+    <!-- AOS LIBRARY (poner en <head> o antes de cerrar el body si no está aún) -->
+<link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet">
+<script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+    
+    <link rel="stylesheet" href="css/style.css">
+
+
+</head>
+<body>
+    <!-- Efecto de partículas para fondo dinámico -->
+    <div class="particles" id="particles"></div>
+
+<header class="glass">
+    <div class="container">
+        <div class="header-content">
+            <a style="text-decoration: none;"  href="index.html"><div class="logo">
+                <i class="fas fa-water" id="tako"></i>
+                TIKVÁ
+            </div></a>
+            <nav>
+                <button id="theme-toggle" class="theme-toggle-button"><i class="fas fa-sun"></i></button>
+                <div class="currency-selector">
+                    <select id="currency-select">
+                        <option value="ARS">🇦🇷 ARS</option>
+                        <option value="USD">🇺🇸 USD</option>
+                        <option value="BRL">🇧🇷 BRL</option>
+                        <option value="PYG">🇵🇾 PYG</option>
+                    </select>
+                </div>
+            </nav>
+        </div>
+    </div>
+</header>
+
+<br>
+<br>
+<br>
+<br>
+
+<main class="container" >
+ <!-- ===== BRANDS SECTION ===== -->
+    <section class="section">
+        <div class="container" data-aos="fade-up" data-aos-delay="200">
+            <div class="skalas-header">
+            <h2 class="skalas-products-title">NUESTRAS <span>MARCAS</span></h2>
+            <div class="wave-effect"></div>
+            <div class="wave-effect"></div>
+            <div class="wave-effect"></div>
+            </div>
+            <div class="brands-grid">
+                <!-- Todas las marcas -->
+                <div class="brand-card glass active" data-brand="all">
+                    <img src="https://i.ibb.co/gLnc6JCm/25644-removebg-preview.png" alt="Todas las marcas" class="brand-logo">
+                    <h3 class="brand-name">Todas <span class="product-count">(0)</span></h3>
+                </div>
+                
+                <!-- Adidas -->
+                <div class="brand-card glass" data-brand="adidas">
+                    <img src="https://i.ibb.co/k2nksCbk/adidas.png" alt="Adidas Logo" class="brand-logo">
+                    <h3 class="brand-name">Adidas <span class="product-count">(0)</span></h3>
+                </div>
+                
+                <!-- Puma -->
+                <div class="brand-card glass" data-brand="puma">
+                    <img src="https://i.ibb.co/Tq842Cxf/pumablanco.png" alt="Puma Logo" class="brand-logo">
+                    <h3 class="brand-name">Puma <span class="product-count">(0)</span></h3>
+                </div>
+                
+                <!-- New Balance -->
+                <div class="brand-card glass" data-brand="new-balance">
+                    <img src="https://i.ibb.co/v4pY72nV/nb.png" alt="New Balance Logo" class="brand-logo">
+                    <h3 class="brand-name">New Balance <span class="product-count">(0)</span></h3>
+                </div>
+                
+                <!-- Vans -->
+                <div class="brand-card glass" data-brand="vans">
+                    <img src="https://i.ibb.co/V0hw5m1w/vansb.png" alt="Vans Logo" class="brand-logo">
+                    <h3 class="brand-name">Vans <span class="product-count">(0)</span></h3>
+                </div>
+                
+                <!-- CAT -->
+                <div class="brand-card glass" data-brand="cat">
+                    <img src="https://i.ibb.co/LD7jb197/cat.png" alt="CAT Logo" class="brand-logo">
+                    <h3 class="brand-name">CAT <span class="product-count">(0)</span></h3>
+                </div>
+            </div>
+        </div>
+    </section>
+
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+
+
+        <div class="skalas-header" data-aos="fade-up" data-aos-delay="200">
+            <h2 class="skalas-products-title">NUESTRAS <span>ZAPATILLAS</span></h2>
+              <div class="wave-effect"></div>
+            <div class="wave-effect"></div>
+            <div class="wave-effect"></div>
+            </div>
+        
+        <br>
+<br>
+        
+            <section id="products">
+
+
+            
+            <div class="product-grid">
+                <!-- Producto 1 -->
+            <div data-aos="fade-up"  class="product-card glass" onclick="openModal(
+                'video/vansclas.mp4', 
+                ['34', '35', '36', '37', '38'], 
+                ['https://i.ibb.co/XnFqDZz/vans2.jpg', 'https://i.ibb.co/TqBBwS36/vans111.jpg', 'https://i.ibb.co/GgNwfmk/vans13.jpg']
+                )" data-brand="vans">
+                <img src="https://i.ibb.co/9991FgJR/vans3.jpg" alt="Zapatillas Vans Old Skool" class="product-image">
+                <h3>Vans Old Skool</h3>
+                <p class="description">El estilo skate clásico que nunca pasa de moda. Suela waffle original.</p>
+                <div class="product-info">
+                    <p class="sizes">Talles: 34 - 38</p>
+                    <p class="price" data-price-ars="36000">$36.000</p>
+                </div>
+                <button class="whatsapp-btn" data-product="Vans Old Skool">
+                    <i class="fab fa-whatsapp"></i> Comprar por WhatsApp
+                </button>
+            </div>
+
+
+            <!-- Producto 2 -->
+            <div data-aos="fade-up" data-aos-delay="200" class="product-card glass" onclick="openModal(
+                'video/vansnegra.mp4', 
+                ['38', '39', '40', '41', '42'], 
+                ['https://i.ibb.co/9991FgJR/vans3.jpg', 'https://i.ibb.co/7hhbfXG/vansnegras1.jpg', 'https://i.ibb.co/gFh54nfh/vansnegras2.jpg']
+                )" data-brand="vans">
+                <img src="https://i.ibb.co/XnFqDZz/vans2.jpg" alt="Zapatillas Vans Old Skool Black" class="product-image">
+                <h3>Vans Old Skool Black</h3>
+                <p class="description">Estilo skate y diseño totalmente negro. Actitud que nunca pasa de moda.</p>
+                <div class="product-info">
+                    <p class="sizes">Talles: 38 - 42</p>
+                    <p class="price" data-price-ars="36000">$36.000</p>
+                </div>
+                <button class="whatsapp-btn" data-product="Vans Old Skool Black">
+                    <i class="fab fa-whatsapp"></i> Comprar por WhatsApp
+                </button>
+            </div>
+
+
+            <!-- Producto 3 -->
+            <div data-aos="fade-up" data-aos-delay="400" class="product-card glass" onclick="openModal(
+                'video/vansblancas.mp4', 
+                ['34', '35', '36', '37', '38'], 
+                ['https://i.ibb.co/FL3t2TQg/vans11.jpg', 'https://i.ibb.co/57kNYZX/vansb1.jpg', 'https://i.ibb.co/PZ9fcSCW/vansb2.jpg']
+                )" data-brand="vans">
+                <img src="https://i.ibb.co/FL3t2TQg/vans11.jpg" alt="Zapatillas Vans Old Skool White" class="product-image">
+                <h3>Vans Old Skool White</h3>
+                <p class="description">Frescura urbana en blanco total. Estilo que destaca siempre.</p>
+                <div class="product-info">
+                    <p class="sizes">Talles: 34 - 38</p>
+                    <p class="price" data-price-ars="36000">$36.000</p>
+                </div>
+                <button class="whatsapp-btn" data-product="Vans Old Skool White">
+                    <i class="fab fa-whatsapp"></i> Comprar por WhatsApp
+                </button>
+            </div>
+
+                        <!-- Producto 4 -->
+            <div data-aos="fade-up" data-aos-delay="200" class="product-card glass" onclick="openModal(
+                'video/nb.mp4', 
+                ['35', '36', '37', '38', '39'], 
+                ['https://i.ibb.co/VsFvFBL/nb1.jpg', 'https://i.ibb.co/VpJGZbc2/nb2.webp', 'https://i.ibb.co/QFJYMCvM/nb3.jpg']
+                )" data-brand="new-balance">
+                <img src="https://i.ibb.co/VsFvFBL/nb1.jpg" alt="Zapatillas New balance 740" class="product-image">
+                <h3>New balance 740</h3>
+                <p class="description">Amortiguación eficiente y soporte estable. Rendimiento con estilo retro.</p>
+                <div class="product-info">
+                    <p class="sizes">Talles: 35 - 39</p>
+                    <p class="price" data-price-ars="45000">$45.000</p>
+                </div>
+                <button class="whatsapp-btn" data-product="New balance 740">
+                    <i class="fab fa-whatsapp"></i> Comprar por WhatsApp
+                </button>
+            </div>
+
+                                    <!-- Producto 5 -->
+            <div data-aos="fade-up" data-aos-delay="400" class="product-card glass" onclick="openModal(
+                'video/cat.mp4', 
+                ['38', '39', '40', '41', '42', '43'], 
+                ['https://i.ibb.co/RGQBHJQB/cat1.jpg', 'https://i.ibb.co/wrswVjXX/cat2.jpg', 'https://i.ibb.co/C3M0NnMz/cat3.jpg']
+                )" data-brand="cat">
+                <img src="https://i.ibb.co/wrswVjXX/cat2.jpg" alt="Zapatillas Botas CAT imperneables" class="product-image">
+                <h3>Botas CAT imperneables</h3>
+                <p class="description">Botas CAT impermeables: resistencia, tracción y protección en todo terreno.</p>
+                <div class="product-info">
+                    <p class="sizes">Talles: 38 - 43</p>
+                    <p class="price" data-price-ars="35000">$35.000</p>
+                </div>
+                <button class="whatsapp-btn" data-product="Botas CAT imperneables">
+                    <i class="fab fa-whatsapp"></i> Comprar por WhatsApp
+                </button>
+            </div>
+
+            
+                                    <!-- Producto 6 -->
+            <div data-aos="fade-up" data-aos-delay="600" class="product-card glass" onclick="openModal(
+                'video/adidasblancas.mp4', 
+                ['35', '36', '37', '38', '39'], 
+                ['https://i.ibb.co/rfN9RrcR/a12.jpg', 'https://i.ibb.co/DPDkYyb0/adidas2.jpg', 'https://i.ibb.co/FLNp9pkJ/a13.jpg']
+                )" data-brand="adidas">
+                <img src="https://i.ibb.co/DPDkYyb0/adidas2.jpg" alt="Zapatillas Adidas SL 72 N" class="product-image">
+                <h3>Adidas SL 72 N</h3>
+                <p class="description">Ligereza retro y tracción segura. Comodidad para el día a día.</p>
+                <div class="product-info">
+                    <p class="sizes">Talles: 35 - 39</p>
+                    <p class="price" data-price-ars="42000">$43.000</p>
+                </div>
+                <button class="whatsapp-btn" data-product="Adidas SL 72 N">
+                    <i class="fab fa-whatsapp"></i> Comprar por WhatsApp
+                </button>
+            </div>
+
+                                            <!-- Producto 7 -->
+            <div data-aos="fade-up" data-aos-delay="200" class="product-card glass" onclick="openModal(
+                'video/adidasmarrones.mp4', 
+                ['34', '35', '36', '37', '38'], 
+                ['https://i.ibb.co/SDGZ1wMX/adidas1.jpg', 'https://i.ibb.co/ccn7DgTT/am1.jpg', 'https://i.ibb.co/xtpM3YS7/am2.jpg']
+                )" data-brand="adidas">
+                <img src="https://i.ibb.co/SDGZ1wMX/adidas1.jpg" alt="Zapatillas Adidas SL 72 RS" class="product-image">
+                <h3>Adidas SL 72 RS</h3>
+                <p class="description">Inspiración retro con materiales premium. Comodidad y estilo comodos.</p>
+                <div class="product-info">
+                    <p class="sizes">Talles: 34 - 38</p>
+                    <p class="price" data-price-ars="40000">$40.000</p>
+                </div>
+                <button class="whatsapp-btn" data-product="Adidas SL 72 RS">
+                    <i class="fab fa-whatsapp"></i> Comprar por WhatsApp
+                </button>
+            </div>
+
+                                 <!-- Producto 8 -->
+            
+            <div data-aos="fade-up" data-aos-delay="400" class="product-card glass" onclick="openModal(
+                'video/puma1.mp4', 
+                ['38', '39', '40', '41'], 
+                ['https://i.ibb.co/Kp31Rg9y/p1.jpg', 'https://i.ibb.co/K1ypBpP/p2.jpg', 'https://i.ibb.co/vC9NSqhJ/p3.jpg']
+                )" data-brand="puma">
+                <img src="https://i.ibb.co/8nKNz3SG/pumas1.jpg" alt="Zapatillas Pumas Caven 2.0" class="product-image" >
+                <h3>Pumas Caven 2.0</h3>
+                <p class="description">Puma Caven 2.0: look retro, confort moderno y pisada suave.</p>
+                <div class="product-info">
+                    <p class="sizes">Talles: 38 - 41</p>
+                    <p class="price" data-price-ars="42700">$42.700</p>
+                </div>
+                <button class="whatsapp-btn" data-product="Pumas Caven 2.0">
+                    <i class="fab fa-whatsapp"></i> Comprar por WhatsApp
+                </button>
+            </div>
+
+            </div>
+        </section>
+
+
+<br>
+
+  <br>
+    <br>
+<br>
+
+
+
+    <footer class="glass">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-brand">
+                    <div class="logo">
+                        <i class="fas fa-water"></i>
+                        TIKVÁ
+                    </div>
+                    <p>Dedicado a la venta de zapatillas y cremas Skala veganas. Calidad, estilo y cuidado en un solo lugar.</p>
+                </div>
+      
+            </div>
+            <div class="copyright">
+                <p>&copy; 2025 TIKVÁ. Todos los derechos reservados.</p>
+            </div>
+        </div>
+    </footer>
+    <script src="js/script.js"></script>
+
+    <div id="modal" class="modal">
+  <div class="modal-content">
+    <span class="close" onclick="closeModal()">&times;</span>
+    
+    <div class="modal-video-container">
+      <video id="modal-video" controls autoplay></video>
+    </div>
+
+    <div class="talles">
+      <h4>Talles disponibles</h4>
+      <div id="talles-list"></div>
+    </div>
+
+    <div class="modal-gallery" id="modal-gallery"></div>
+  </div>
+</div>
+
+
+<script>
+  AOS.init({
+    duration: 1000,
+    once: true
+  });
+</script>
+
+</body>
+</html>
