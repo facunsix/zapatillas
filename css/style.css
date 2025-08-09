@@ -680,12 +680,9 @@ footer {
     font-size: 0.9rem;
 }
 
-/* ===== RESPONSIVE DESIGN ===== */
-
-
 @media (max-width: 780px) {
     .hero-content {
-        display: flex; /* CAMBIO CLAVE */
+        display: flex;
         flex-direction: column;
         text-align: center;
         padding: 20px;
@@ -693,8 +690,16 @@ footer {
 
     .hero-image-container {
         order: 2;
-        height: 420px;
         margin-top: 20px;
+        width: 100%;
+        height: auto; /* Evita recortes */
+        display: flex;
+        justify-content: center;
+    }
+
+    .hero-image-container img {
+        max-width: 100%; /* Escala proporcionalmente */
+        height: auto;
     }
 
     .hero-text {
@@ -713,9 +718,6 @@ footer {
         grid-template-columns: 1fr;
     }
 }
-
-
-
 /* ===== ANIMACIONES ===== */
 @keyframes fadeIn {
     from { opacity: 0; transform: translateY(20px); }
