@@ -184,6 +184,9 @@ h1, h2, h3, h4 {
 }
 
 /* ===== HEADER ===== */
+
+
+
 header {
     position: sticky;
     top: 15px;
@@ -234,14 +237,14 @@ header {
 nav {
     display: flex;
     align-items: center;
-    gap: 20px;
+    gap: 590px;
 }
 
 .theme-toggle-button {
     background: var(--secondary-gray);
     border: none;
-    width: 50px;
-    height: 37px;
+    width: 40px;
+    height: 40px;
     border-radius: 70%;
     display: flex;
     align-items: center;
@@ -251,6 +254,8 @@ nav {
     transition: var(--transition);
     box-shadow: var(--shadow-sm);
     font-size: 1.2rem;
+   
+    flex-shrink: 0;
 }
 
 .theme-toggle-button:hover {
@@ -263,6 +268,7 @@ nav {
     max-width: 200px;
     width: 100%;
     margin: 0 auto;
+    
 }
 
 .currency-selector select {
@@ -275,7 +281,7 @@ nav {
     cursor: pointer;
     transition: var(--transition);
     font-weight: 500;
-    width: 100%;
+    width: 53%;
     font-size: 1rem;
     box-sizing: border-box;
 }
@@ -290,14 +296,54 @@ nav {
     border-color: var(--accent-red);
     box-shadow: 0 0 0 3px rgba(230, 57, 70, 0.2);
 }
-
+/* Cuando sea pantalla chica */
 @media (max-width: 780px) {
+    .header-content {
+        display: flex;
+        flex-direction: column; /* Dos filas */
+        align-items: stretch;
+    }
+
+    /* Sobrescribimos gap */
+    nav {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        width: 100%;
+        gap: 0; /* Desactiva el espacio gigante */
+    }
+
+    .logo {
+        font-size: 1.6rem;
+        display: flex;
+        align-items: center;
+        gap: 8px;
+    }
+
+    .theme-toggle-button {
+        width: 45px;
+        height: 45px;
+        border-radius: 50%;
+        font-size: 1.2rem;
+        flex-shrink: 0;
+    }
+
+    .currency-selector {
+        display: flex;
+        justify-content: center;
+        width: 100%;
+        margin-top: 10px;
+    }
+
     .currency-selector select {
         font-size: 0.9rem;
-        padding: 15px 19px;
-        border-radius: 10px;
+        padding: 8px 14px;
+        border-radius: 8px;
+        width: auto;
     }
 }
+
+
 
 /* ===== HERO SECTION ===== */
 #hero {
