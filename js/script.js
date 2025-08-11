@@ -359,3 +359,7 @@ function closeModal() {
     });
 });
 
+document.getElementById("floatingBtn").addEventListener("click", function() {
+    const menu = document.getElementById("floatingMenu");
+    menu.style.display = menu.style.display === "flex" ? "none" : "flex";
+});
