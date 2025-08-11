@@ -1740,6 +1740,12 @@ footer {
             margin-bottom: 0.8rem;
             line-height: 1.4;
         }
+[data-theme="light"] .product-description {
+    color: var(--white);
+}
+
+
+
         .product-price {
             font-size: 1.5rem;
             font-weight: 800;
@@ -1759,6 +1765,10 @@ footer {
             border-radius: 20px;
             font-size: 0.8rem;
         }
+[data-theme="light"] .size-pill {
+    color: var(--white);
+}
+
         .product-cta {
             display: inline-block;
             background: var(--accent-red);
