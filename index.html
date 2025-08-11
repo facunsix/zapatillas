@@ -1,0 +1,334 @@
+<!DOCTYPE html>
+<html lang="es" data-theme="dark">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tikvá | Zapatillas y Skalas</title>
+<meta name="description" content="Tikvá es tu tienda de confianza para zapatillas y cremas Skala en Argentina. Productos originales, atención personalizada y envíos a todo el país.">
+
+    <link rel="icon" href="https://i.ibb.co/1JTm1rQk/logo.png" type="image/x-icon">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Montserrat:wght@700;800&display=swap" rel="stylesheet">
+    <!-- AOS LIBRARY (poner en <head> o antes de cerrar el body si no está aún) -->
+<link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet">
+<script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+
+
+    
+    <link rel="stylesheet" href="css/style.css">
+
+
+</head>
+<body>
+    <!-- Efecto de partículas para fondo dinámico -->
+    <div class="particles" id="particles"></div>
+
+<header class="glass">
+    <div class="container">
+        <div class="header-content">
+            <!-- Fila 1 -->
+            <nav>
+                <a style="text-decoration: none;" href="index.html">
+                    <div class="logo">
+                        <i class="fas fa-water" id="tako"></i>
+                        TIKVÁ
+                    </div>
+                </a>
+                <button id="theme-toggle" class="theme-toggle-button">
+                    <i class="fas fa-sun"></i>
+                </button>
+            </nav>
+
+            <!-- Fila 2 -->
+            <div class="currency-selector">
+                <select id="currency-select">
+                    <option value="ARS">🇦🇷 ARS</option>
+                    <option value="USD">🇺🇸 USD</option>
+                    <option value="BRL">🇧🇷 BRL</option>
+                    <option value="PYG">🇵🇾 PYG</option>
+                </select>
+            </div>
+        </div>
+    </div>
+</header>
+
+
+    <main class="container" >
+        <section id="hero" class="glass" >
+            <div class="hero-content">
+                <div class="hero-text">
+                    <h2>DESCUBRE LA ÚLTIMA COLECCIÓN</h2>
+                    <p>Encuentra el par perfecto que se adapte a tu estilo urbano y marca tendencia donde vayas.</p>
+                    <!-- En el Hero -->
+        <a onclick="scrollToProducts(event)" href="zapas.html" class="cta-button">Explorar Colección</a>
+                </div>
+                <div class="hero-image-container">
+                    <img src="https://i.ibb.co/M5Vx6tnv/Pisa-Fuerte-este-a-o-1.png" alt="Zapatillas destacadas" class="hero-image">
+                </div>
+            </div>
+        </section>
+
+<section id="skalas" class="skalas-section">
+    <h2 class="section-title" data-aos="fade-up" data-aos-delay="200">LÍNEA DE CREMAS <span>SKALAS</span></h2>
+    <div class="skalas-grid">
+       
+        <!-- Tarjeta 1 - Imagen abajo -->
+        <div class="skalas-card" data-aos="fade-up" data-aos-delay="200">
+            <div class="skalas-content">
+                <div class="content-inner">
+                    <h3 class="skalas-title">Línea Frutástica</h3>
+                    <p>Hidratación intensa con extractos de frutas naturales para cabellos secos y dañados.</p>
+                    <div class="button-container">
+                        <a href="skalas.html" class="cta-button">Ver productos</a>
+                    </div>
+                </div>
+            </div>
+            <div class="skalas-image-container">
+                <img src="https://i.ibb.co/CK38vd9V/frutastica.png" alt="Crema Skalas Frutal" class="skalas-image">
+                <div class="image-overlay"></div>
+            </div>
+        </div>
+    
+        <!-- Tarjeta 2 - Imagen arriba -->
+        <div class="skalas-card" data-aos="fade-up" data-aos-delay="400">
+            <div class="skalas-image-container">
+                <img src="https://i.ibb.co/x8Ddv3kp/expert.png" alt="Crema Skalas Profesional" class="skalas-image">
+                <div class="image-overlay"></div>
+            </div>
+            <div class="skalas-content">
+                <div class="content-inner">
+                    <h3 class="skalas-title">Línea Expert</h3>
+                    <p>Tratamiento de salón con keratina para reparación profunda del cabello.</p>
+                    <div class="button-container">
+                        <a href="skalas.html" class="cta-button">Ver productos</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Tarjeta 3 - Imagen abajo -->
+        <div class="skalas-card" data-aos="fade-up" data-aos-delay="600">
+            <div class="skalas-content">
+                <div class="content-inner">
+                    <h3 class="skalas-title">Línea Brasil & Ceramidas</h3>
+                    <p>Ingredientes 100% naturales sin sulfatos ni parabenos para un cuidado suave.</p>
+                    <div class="button-container">
+                        <a href="skalas.html" class="cta-button">Ver productos</a>
+                    </div>
+                </div>
+            </div>
+            <div class="skalas-image-container">
+                <img src="https://i.ibb.co/p6NYdNL2/brasil.png" alt="Crema Skalas Natural" class="skalas-image">
+                <div class="image-overlay"></div>
+            </div>
+        </div>
+
+
+   
+    </div>
+</section>
+
+    <br>
+ <section class="section-productos">
+            <!-- Producto 1 - Grande (2x2) -->
+            <div class="product-item"  data-aos="fade-up" data-aos-delay="200">
+                <span class="product-tag">Nuevo</span>
+                <img src="section/TIKV.png" alt="Boutique Online">
+                <div class="product-overlay">
+                    <div class="product-title">NUESTRO INSTAGRAM</div>
+                    <div class="product-description">Descubre nuestra nueva colección de zapatillas, skalas y más</div>
+                    <a href="https://www.instagram.com/tikva_ok/" class="product-cta">Explorar</a>
+                </div>
+            </div>
+            
+            <!-- Producto 2 - Ancho (2 columnas) -->
+            <div class="product-item" data-aos="fade-up" data-aos-delay="400">
+                <span class="product-tag">Oferta</span>
+                <img src="section/3.png" alt="SKALA Expert">
+                <div class="product-overlay">
+                    <div class="product-title">SKALA EXPERT</div>
+                    <div class="product-description">Creme 3em1 - Tratamiento + Super Condicionador + Creme para Pentear</div>
+                    <div class="product-price">$6.190</div>
+                    <a href="https://api.whatsapp.com/send?phone=+5493764634206&text=%C2%A1Hola!%20Me%20interesa%20la%20crema%20Skala%20Genetic%20Glicolico%20Crema%20Vegana%20Brillo%20Hidrataci%C3%B3n%201kg.%20%C2%BFPodr%C3%ADas%20darme%20m%C3%A1s%20informaci%C3%B3n%3F" class="product-cta">Comprar</a>
+                </div>
+            </div>
+            
+            <!-- Producto 3 - Normal -->
+            <div class="product-item" data-aos="fade-up" data-aos-delay="600">
+                <span class="product-tag">Nuevo</span>
+                <img src="section/12.png" alt="Vinagre de Manzana">
+                <div class="product-overlay">
+                    <div class="product-title">SKALA EXPERT VINAGRE DE MAÇÃ</div>
+                    <div class="product-description">Reduce poros y frizz para cabello renovado</div>
+                    <div class="product-price">$6.300</div>
+                    <a href="https://api.whatsapp.com/send?phone=+5493764634206&text=%C2%A1Hola!%20Me%20interesa%20la%20crema%20Skala%20Mascara%20Crema%20Vinagre%20De%20Maca%20Manzana%20Vegana.%20%C2%BFPodr%C3%ADas%20darme%20m%C3%A1s%20informaci%C3%B3n%3F" class="product-cta">Comprar</a>
+                </div>
+            </div>
+            
+            <!-- Producto 4 - Alto (2 filas) -->
+            <div class="product-item" data-aos="fade-up" data-aos-delay="800">
+                <span class="product-tag">SALE</span>
+                <img src="section/1.png" alt="Nueva Colección">
+                <div class="product-overlay">
+                    <div class="product-title">NUEVA COLECCIÓN</div>
+                    <div class="product-description">Ofertas especiales con hasta 50% de descuento</div>
+                    <a href="zapas.html" class="product-cta">Ver ofertas</a>
+                </div>
+            </div>
+            
+            <!-- Producto 5 - SUPER OFERTAS -->
+            <div class="product-item" data-aos="fade-up" data-aos-delay="1000">
+                <span class="product-tag">SUPER</span>
+                <img src="section/6.png" alt="Super Ofertas">
+                <div class="product-overlay">
+                    <div class="product-title">SUPER OFERTAS</div>
+                    <div class="product-price">$42.000</div>
+                    <div class="product-description">Tallas Disponibles</div>
+                    <div class="sizes-container">
+                        <span class="size-pill">35</span>
+                        <span class="size-pill">36</span>
+                        <span class="size-pill">37</span>
+                        <span class="size-pill">38</span>
+                        <span class="size-pill">39</span>
+                    </div>
+                    <a href="https://api.whatsapp.com/send?phone=+5493764634206&text=%C2%A1Hola!%20Me%20interesan%20las%20zapatillas%20Adidas%20SL%2072%20N.%20%C2%BFPodr%C3%ADas%20darme%20m%C3%A1s%20informaci%C3%B3n%3F" class="product-cta">Comprar Ahora</a>
+                </div>
+            </div>
+        </section>
+
+  <br>
+
+<!-- SECCIÓN INFORMATIVA CON CORRECCIONES DE TEMA -->
+<section id="info-section" class="info-section">
+  <div class="section-header" data-aos="fade-up">
+    <h2>Tu experiencia Tikvá</h2>
+    <p class="section-subtitle">Todo lo que necesitás saber para una compra fácil y segura</p>
+  </div>
+  
+  <div class="info-grid">
+    <!-- FAQ -->
+    <div class="info-card" data-aos="fade-up">
+      <div class="card-icon">
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <circle cx="12" cy="12" r="10"></circle>
+          <path d="M9.09 9a3 3 0 0 1 5.83 1c0 2-3 3-3 3"></path>
+          <line x1="12" y1="17" x2="12.01" y2="17"></line>
+        </svg>
+      </div>
+      <h3>Preguntas Frecuentes</h3>
+      <p>¿Tenés dudas? Navegá nuestros productos tranquilamente en esta página. Para comprar o consultar, escribinos por WhatsApp.</p>
+      <div class="card-highlight">
+        <span>¡Respondemos en minutos, sin vueltas!</span>
+      </div>
+    </div>
+
+    <!-- Política de envíos -->
+    <div class="info-card" data-aos="fade-up" data-aos-delay="200">
+      <div class="card-icon">
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M3 3h18v18H3z"></path>
+          <circle cx="12" cy="12" r="3"></circle>
+          <path d="M18 6L6 18"></path>
+        </svg>
+      </div>
+      <h3>Envíos y Retiros</h3>
+      <p>Llevamos tus productos hasta la puerta de tu casa en <strong>Posadas, Misiones</strong>. También podés retirar en nuestro punto de encuentro.</p>
+      <div class="card-highlight">
+        <span>¡Coordinamos horarios a tu medida!</span>
+      </div>
+    </div>
+
+    <!-- Medios de pago -->
+    <div class="info-card" data-aos="fade-up" data-aos-delay="400">
+      <div class="card-icon">
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <rect x="1" y="4" width="22" height="16" rx="2" ry="2"></rect>
+          <line x1="1" y1="10" x2="23" y2="10"></line>
+        </svg>
+      </div>
+      <h3>Formas de Pago</h3>
+      <p>Aceptamos múltiples opciones para tu comodidad:</p>
+      <ul class="payment-methods">
+        <li>Efectivo</li>
+        <li>Mercado Pago</li>
+        <li>Transferencias</li>
+        <li>Billeteras digitales</li>
+      </ul>
+    </div>
+
+    <!-- Sobre nosotros -->
+    <div class="info-card" data-aos="fade-up" data-aos-delay="600">
+      <div class="card-icon">
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path>
+          <circle cx="9" cy="7" r="4"></circle>
+          <path d="M23 21v-2a4 4 0 0 0-3-3.87"></path>
+          <path d="M16 3.13a4 4 0 0 1 0 7.75"></path>
+        </svg>
+      </div>
+      <h3>Nuestra Esencia</h3>
+      <p><strong>Tikvá</strong> nació para ofrecerte más que productos: una experiencia de compra cercana y confiable.</p>
+      <div class="card-highlight">
+        <span>Emprendimiento local con pasión por lo que hacemos</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+    <br>
+    <br>
+<br>
+
+
+
+    <footer class="glass">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-brand">
+                    <div class="logo">
+                        <i class="fas fa-water"></i>
+                        TIKVÁ
+                    </div>
+                    <p>Dedicado a la venta de zapatillas y cremas Skala veganas. Calidad, estilo y cuidado en un solo lugar.</p>
+                </div>
+      
+            </div>
+            <div class="copyright">
+                <p>&copy; 2025 TIKVÁ. Todos los derechos reservados.</p>
+            </div>
+        </div>
+    </footer>
+
+<!-- Botón flotante -->
+<div class="floating-btn" id="floatingBtn">
+    <i class="fas fa-shopping-bag"></i>
+</div>
+
+<!-- Menú flotante -->
+<div class="floating-menu" id="floatingMenu">
+    <a href="zapas.html">Zapatillas</a>
+    <a href="skalas.html">Skalas</a>
+</div>
+
+<!-- FontAwesome para íconos -->
+<script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+
+
+    
+    <script src="js/script.js"></script>
+
+
+<script>
+  AOS.init({
+    duration: 1000,
+    once: true
+  });
+</script>
+
+
+
+
+</body>
+</html>
