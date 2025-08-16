@@ -103,9 +103,9 @@ window.addEventListener('scroll', () => {
     // --- Funcionalidad de Conversión de Moneda ---
     const exchangeRates = {
         ARS: 1, // Base
-        USD: 1351.86, // Ejemplo: 1 USD = 1000 ARS
-        BRL: 243.49, // Ejemplo: 1 BRL = 200 ARS
-        PYG: 0.18, // Ejemplo: 1 PYG = 0.15 ARS
+        USD: 1298.46, // Ejemplo: 1 USD = 1000 ARS
+        BRL: 240.24, // Ejemplo: 1 BRL = 200 ARS
+        PYG: 0.17, // Ejemplo: 1 PYG = 0.15 ARS
     };
 
     const currencySymbols = {
